@@ -1,0 +1,29 @@
+<div>
+  <mat-toolbar>
+    <span>Herramientas</span>
+  </mat-toolbar>
+  <mat-card class="centrado">
+
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell  *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+        <td mat-cell  *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
+      <ng-container matColumnDef="image">
+        <th mat-header-cell  *matHeaderCellDef> Imagen </th>
+        <td mat-cell *matCellDef="let element">
+          <img src='{{element.image}}' height="250" width="250">
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </mat-card>
+
+</div>

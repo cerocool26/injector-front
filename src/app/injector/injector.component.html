@@ -1,0 +1,73 @@
+<div content="main-content">
+  <mat-toolbar>
+    <span>Injectores Aplicación</span>
+  </mat-toolbar>
+  <br>
+  <mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile (click)="openDialog('bosch')">
+      <mat-card >
+        <img src="assets/Bosch_logo.png" height="150" width="400">
+        <mat-card-title>Inyector Bosch</mat-card-title>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile (click)="openDialog('denso')">
+      <mat-card>
+        <img src="assets/densologo.png" height="150" width="400">
+        <mat-card-title>Inyector Denso</mat-card-title>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile (click)="openDialog('delphi')">
+      <mat-card>
+        <img src="assets/delphilogo.jpeg" height="150" width="400">
+        <mat-card-title>Inyector Delphi</mat-card-title>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile (click)="openCalibration()">
+      <mat-card >
+        <img src="assets/Bosch_logo.png" height="150" width="400">
+        <mat-card-title>Calibracion Inyector Bosch #110</mat-card-title>
+        <mat-card-subtitle>Micro esfera 1.50</mat-card-subtitle>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile (click)="openCalibration2()">
+      <mat-card >
+        <img src="assets/Bosch_logo.png" height="150" width="400">
+        <mat-card-title>Calibracion inyector Bosch #110</mat-card-title>
+        <mat-card-subtitle>Micro esfera 1.34</mat-card-subtitle>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile (click)="openCalibration3()">
+      <mat-card >
+        <img src="assets/Bosch_logo.png" height="150" width="400">
+        <mat-card-title>Calibracion Inyector Bosch #120</mat-card-title>
+        <mat-card-subtitle>Micro esfera 1.34</mat-card-subtitle>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile (click)="openCalibration4()">
+      <mat-card >
+        <img src="assets/densologo.png" height="150" width="400">
+        <mat-card-title>Calibracion Inyector Denso</mat-card-title>
+        <mat-card-subtitle>Resistencia  electrica entre 0.9 a 1.2 Ohms</mat-card-subtitle>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile (click)="openCreateTestview()">
+      <mat-card style="text-align: center" >
+        <img src="assets/guardar.png" height="150" width="150">
+        <mat-card-title>Crear y listar fallos </mat-card-title>
+      </mat-card>
+    </mat-grid-tile>
+
+
+    <mat-grid-tile (click)="openTools()">
+      <mat-card>
+        <img src="assets/tool.jpg" height="150" width="300">
+        <mat-card-title>Herramientas</mat-card-title>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+

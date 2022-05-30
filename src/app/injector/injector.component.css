@@ -1,0 +1,10 @@
+mat-toolbar{
+  color: aliceblue;
+  background: #ad3333;
+}
+
+mat-card{
+  height: 190px;
+  width: 400px;
+}
+

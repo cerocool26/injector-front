@@ -1,0 +1,65 @@
+<div>
+  <mat-toolbar>
+    <span>Injectores Aplicación</span>
+  </mat-toolbar>
+
+  <div class="contenedor">
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="prueba"  placeholder="Ingrese la prueba">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="rangoOperacion"  placeholder="Ingrese el rango de operacion">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="datosInyector"  placeholder="Ingrese datos del inyector">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="tipoInyector"  placeholder="Ingrese el tipo del inyector">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="createTest()">Guardar</button>
+
+    <br>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="prueba">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.prueba}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="rangoOperacion">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.rangoOperacion}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="datosInyector">
+        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <td mat-cell *matCellDef="let element"> {{element.datosInyector}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="tipoInyector">
+        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoInyector}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </div>
+
+
+
+</div>
