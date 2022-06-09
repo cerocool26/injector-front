@@ -3,4 +3,5 @@ export interface RequestCreateTest{
   rangoOperacion : string,
   datosInyector : number;
   tipoInyector : string;
+  codPrueba: string;
 }

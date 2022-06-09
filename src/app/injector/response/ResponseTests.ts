@@ -4,4 +4,5 @@ export interface ResponseTests{
   rangoOperacion : string,
   datosInyector : number;
   tipoInyector : string;
+  codPrueba: string;
 }

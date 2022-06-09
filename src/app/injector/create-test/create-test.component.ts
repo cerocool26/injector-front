@@ -11,9 +11,10 @@ export class CreateTestComponent implements OnInit {
   rangoOperacion = "";
   datosInyector = 0;
   tipoInyector = "";
+  codPrueba = "";
   dataSource = [];
 
-  displayedColumns: string[] = ['prueba', 'rangoOperacion', 'datosInyector','tipoInyector'];
+  displayedColumns: string[] = ['prueba', 'rangoOperacion', 'datosInyector','tipoInyector','codPrueba'];
 
   constructor(private testService: TestService) {
   }
@@ -26,7 +27,8 @@ export class CreateTestComponent implements OnInit {
       prueba : this.prueba,
       rangoOperacion : this.rangoOperacion,
       datosInyector : this.datosInyector,
-      tipoInyector : this.tipoInyector
+      tipoInyector : this.tipoInyector,
+      codPrueba: this.codPrueba,
     }
     this.testService.createTest(request).subscribe();
     this.getTest();
